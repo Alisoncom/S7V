@@ -1,0 +1,73 @@
+/* ======== NUEVO MENÚ HAMBURGUESA PARA MÓVIL ========= */
+
+/* Botón Hamburguesa - Solo se muestra en móviles */
+.responsive .hamburger {
+   display: none;
+   font-size: 30px;
+   padding: 15px 20px;
+   cursor: pointer;
+   color: #fff;
+   background-color: #333;
+   text-align: right;
+   position: relative;
+   z-index: 1001;
+}
+
+/* Contenedor del menú principal */
+.responsive .main-nav {
+   position: relative;
+   background-color: #111;
+}
+
+/* Lista del menú */
+.responsive .main-nav .nav-list {
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   margin: 0;
+   padding: 15px 0;
+   gap: 30px;
+}
+
+.responsive .main-nav .nav-list li a {
+   color: #fff;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+/* MÓVIL - Estilo alternativo */
+@media (max-width: 480px) {
+   .responsive .hamburger {
+      display: block;
+   }
+
+   .responsive .main-nav .nav-list {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      padding: 10px 0;
+   }
+
+   .responsive .main-nav.open .nav-list {
+      display: flex;
+   }
+
+   .responsive .main-nav .nav-list li {
+      padding: 10px 0;
+      width: 100%;
+   }
+
+   .responsive .main-nav .nav-list li a {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #222;
+      border-bottom: 1px solid #333;
+      text-align: center;
+   }
+
+   .responsive .main-nav .nav-list li a:hover {
+      background-color: #444;
+   }
+}
