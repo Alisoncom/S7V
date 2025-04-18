@@ -1,0 +1,76 @@
+/* ========= BOTÓN HAMBURGUESA ========= */
+.hamburger {
+   display: none;
+   font-size: 30px;
+   padding: 15px 20px;
+   cursor: pointer;
+   color: #fff;
+   background-color: #111;
+   text-align: right;
+   position: relative;
+   z-index: 1001;
+ }
+ 
+ /* ========= CONTENEDOR DE NAVEGACIÓN ========= */
+ .main-nav {
+   position: relative;
+   background-color: #111;
+ }
+ 
+ /* ========= LISTA DEL MENÚ PRINCIPAL ========= */
+ .main-nav .nav-list {
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   margin: 0;
+   padding: 15px 0;
+   gap: 30px;
+ }
+ 
+ .main-nav .nav-list li a {
+   color: #fff;
+   text-decoration: none;
+   font-weight: bold;
+ }
+ 
+ /* ========= ESTILOS RESPONSIVE ========= */
+ @media (max-width: 768px) {
+   /* Mostrar botón hamburguesa */
+   .hamburger {
+     display: block;
+   }
+ 
+   /* Ocultar lista por defecto */
+   .main-nav .nav-list {
+     display: none;
+     flex-direction: column;
+     align-items: center;
+     padding: 10px 0;
+     gap: 0;
+     width: 100%;
+   }
+ 
+   /* Mostrar lista cuando el menú está abierto */
+   .main-nav.open .nav-list {
+     display: flex;
+   }
+ 
+   /* Estilo de los ítems en modo móvil */
+   .main-nav .nav-list li {
+     width: 100%;
+     text-align: center;
+     padding: 10px 0;
+   }
+ 
+   .main-nav .nav-list li a {
+     display: block;
+     width: 100%;
+     padding: 10px;
+     background-color: #222;
+     border-bottom: 1px solid #333;
+   }
+ 
+   .main-nav .nav-list li a:hover {
+     background-color: #444;
+   }
+ }
